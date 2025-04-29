@@ -1,7 +1,12 @@
 const { Server } = require("socket.io");
 
 const io = new Server(8000, {
-  cors: true,
+  cors:{
+    origin: "http://localhost:3000", // Allow only your client domain
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+    credentials: true, // Allow cookies or credentials if needed
+  },
 });
 
 const emailToSocketIdMap = new Map();

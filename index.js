@@ -2,7 +2,7 @@ const { Server } = require("socket.io");
 
 const io = new Server(8000, {
   cors:{
-    origin: "http://localhost:3000", // Allow only your client domain
+    origin: "https://job-board-one-gold.vercel.app", // Allow only your client domain
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
     credentials: true, // Allow cookies or credentials if needed

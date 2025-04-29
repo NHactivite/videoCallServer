@@ -5,7 +5,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors:{
-    origin: "https://job-board-one-gold.vercel.app", // Allow only your client domain
+    origin: "https://job-board-tawny-pi.vercel.app/", // Allow only your client domain
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
     credentials: true, // Allow cookies or credentials if needed
